@@ -19,6 +19,11 @@ export default function ImageDetail() {
       This is the image detail page.
       <h3>Author: {image.author}</h3>
       <img src={`${image.download_url}`}></img>
+      <p>The original image dimensions are:</p>
+      <p>Width: {image.width}px
+        <br></br>
+      Height: {image.height}px</p>
+      <p>You can find more information about this image here: <a href={`${image.url}`} target='_blank' rel='noopener noreferrer'>{image.url}</a></p>
     </div>
   );
 }
