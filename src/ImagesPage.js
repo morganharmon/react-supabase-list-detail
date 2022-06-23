@@ -19,7 +19,7 @@ export default function ImagesPage() {
 
   return (
     <div>
-      This is the images page. You are view page {page}.
+      You are viewing page {page}.
       <button disabled={ page <= 1 } onClick={() => setPage(page - 1)}>Previous</button>
       <button onClick={() => setPage(page + 1)}>Next</button>
       {
