@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import ImageRender from './ImageRender.js';
+import ImagesList from './ImagesList.js';
 import { getImages } from './services/fetch-utils';
 
 export default function ImagesPage() {
@@ -22,9 +22,7 @@ export default function ImagesPage() {
       You are viewing page {page}.
       <button disabled={ page <= 1 } onClick={() => setPage(page - 1)}>Previous</button>
       <button onClick={() => setPage(page + 1)}>Next</button>
-      {
-        images.map((image, i) => <ImageRender key={image.url + i} image={ image } />)
-      }
+      <ImagesList images={ images } />
     </div>
   );
 }
